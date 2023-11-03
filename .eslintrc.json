@@ -3,9 +3,15 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:prettier/recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked"
   ],
-  "plugins": ["testing-library"],
+  "parserOptions": {
+    "project": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["testing-library", "@typescript-eslint"],
   "overrides": [
     {
       "files": [
